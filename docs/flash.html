@@ -89,6 +89,10 @@
         border-radius: 10px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
       }
+      .buttons-container {
+        display: flex;
+        justify-content: center;
+      }
 
       .start-button {
         padding: 20px 40px;
@@ -102,9 +106,10 @@
         transition: background-color 0.3s;
         box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.3);
         margin-top: 0px;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
         margin-bottom: 0px;
+        width: 380px;
       }
 
       .start-button:hover {
@@ -181,7 +186,11 @@
   </head>
   <body>
     <div class="container">
-      <a class="github-link" href="https://github.com/yanshay/spoolease" target="_blank">
+      <a
+        class="github-link"
+        href="https://github.com/yanshay/spoolease"
+        target="_blank"
+      >
         <div class="github-icon">
           <svg
             width="48"
@@ -222,19 +231,32 @@
       <!--       (but not on your iOS device)</span>. -->
       <!--   </span -->
       <!-- </improv-wifi-serial-launch-button> -->
-      <div>
-        <esp-web-install-button
-          id="install-button"
-          manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/web-install/manifest.json"
-        >
-          <button slot="activate" class="start-button">
-            Web Flash Firmware<br />(Chrome / Edge Only)
-          </button>
-        </esp-web-install-button>
-
-        <button class="start-button">
-          Command Line Flasher<br />Download (TBA)
-        </button>
+      <div class="buttons-container">
+        <div>
+          <esp-web-install-button
+            id="install-button"
+            manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/web-install/manifest-new-0.1.7.json" >
+            <button slot="activate" class="start-button">
+              Flash Firmware - New Install<br />(Chrome / Edge Only)
+            </button>
+          </esp-web-install-button>
+          <!-- <button class="start-button"> -->
+          <!--   Command Line Flasher<br />Download (TBA) -->
+          <!-- </button> -->
+        </div>
+        <div style="display: none;">
+          <esp-web-install-button
+            id="install-button"
+            manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/web-install/manifest-upgrade-0.1.7.json"
+          >
+            <button slot="activate" class="start-button">
+              Flash Firmware - Upgrade<br />(Chrome / Edge Only)
+            </button>
+          </esp-web-install-button>
+          <!-- <button class="start-button"> -->
+          <!--   Command Line Flasher<br />Download (TBA) -->
+          <!-- </button> -->
+        </div>
       </div>
       <!-- Features Section -->
       <div class="features">
