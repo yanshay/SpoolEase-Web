@@ -70,7 +70,7 @@
       .hero-description {
         font-size: 24px;
         color: #444;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         line-height: 1.5;
       }
 
@@ -83,6 +83,13 @@
         display: inline-block;
       }
 
+      .notice {
+        font-size: 20px;
+        color: #444;
+        margin-top: -20px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
       .hero-image {
         max-width: 100%;
         height: auto;
@@ -237,65 +244,88 @@
       <!--       (but not on your iOS device)</span>. -->
       <!--   </span -->
       <!-- </improv-wifi-serial-launch-button> -->
+
+      <p class="notice">
+        Firmware flashing is supported only in Chrome/Edge browsers 
+      </p>
       <div class="buttons-container">
         <div>
           <esp-web-install-button
             id="install-button"
-            manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/web-install/manifest-new-0.1.12.json" >
-            <button slot="activate" class="start-button">
-              Flash Firmware - New Install<br />(Chrome / Edge Only)
-            </button>
-          </esp-web-install-button>
-          <!-- <button class="start-button"> -->
-          <!--   Command Line Flasher<br />Download (TBA) -->
-          <!-- </button> -->
-        </div>
-        <div">
-          <esp-web-install-button
-            id="install-button"
-            manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/web-install/manifest-upgrade-0.1.12.json"
+            manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/web-install/manifest-new-0.2.1.json"
           >
             <button slot="activate" class="start-button">
-              Flash Firmware - Upgrade<br />(Chrome / Edge) &nbsp;&nbsp; Don't Erase!
+              Flash Latest Version 0.2.1<br/>New Install
             </button>
           </esp-web-install-button>
-          <!-- <button class="start-button"> -->
-          <!--   Command Line Flasher<br />Download (TBA) -->
-          <!-- </button> -->
         </div>
+
         <div>
-          <button class="start-button" style="margin-top: 20px;"><a class="button-link" href = "https://github.com/yanshay/SpoolEase/releases/tag/SpoolEase-Desktop-r0.1.0">SpoolEase Desktop<br/>for Mac and Windows</a></button>
+          <esp-web-install-button
+            id="install-button"
+            manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/web-install/manifest-upgrade-0.2.1.json"
+          >
+            <button slot="activate" class="start-button">
+              Flash Latest Version 0.2.1<br/>Upgrade - Don't
+              Erase!
+            </button>
+          </esp-web-install-button>
+        </div>
+
+      </div>
+      <div class="buttons-container" style="margin-top: 20px">
+        <div>
+          <esp-web-install-button
+            id="install-button"
+            manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/web-install/manifest-new-0.1.12.json"
+          >
+            <button slot="activate" class="start-button">
+              Flash Previous Version 0.1.12<br/>New Install
+            </button>
+          </esp-web-install-button>
         </div>
       </div>
-      <!-- Features Section -->
-      <div class="features">
-        <div class="feature-item">
-          <h3>NFC Filament Configuration</h3>
-          <p>
-            NFC tags automatically configures your printer and adjusts settings
-            when swapping filaments, streamlining the process
-          </p>
-        </div>
-        <div class="feature-item">
-          <h3>Visibility</h3>
-          <p>
-            Enjoy complete visibility to filaments inside your AMS units and
-            External spool settings
-          </p>
-        </div>
-        <div class="feature-item">
-          <h3>More Features to Come</h3>
-          <p>More features are planned to simplify dealing with filaments</p>
+
+      <div class="buttons-container">
+        <div>
+          <button class="start-button" style="margin-top: 20px">
+            <a
+              class="button-link"
+              href="https://github.com/yanshay/SpoolEase/releases/tag/SpoolEase-Desktop-r0.1.0"
+              >SpoolEase Desktop<br />for Mac and Windows</a
+            >
+          </button>
         </div>
       </div>
-      <a href="https://slint.dev/" target="_blank">
-        <img
-          src="assets/MadeWithSlint-logo-dark-large.png"
-          id="slint-img"
-          alt="Made with Slint"
-        />
-      </a>
     </div>
+    <!-- Features Section -->
+    <div class="features">
+      <div class="feature-item">
+        <h3>NFC Filament Configuration</h3>
+        <p>
+          NFC tags automatically configures your printer and adjusts settings
+          when swapping filaments, streamlining the process
+        </p>
+      </div>
+      <div class="feature-item">
+        <h3>Visibility</h3>
+        <p>
+          Enjoy complete visibility to filaments inside your AMS units and
+          External spool settings
+        </p>
+      </div>
+      <div class="feature-item">
+        <h3>More Features to Come</h3>
+        <p>More features are planned to simplify dealing with filaments</p>
+      </div>
+    </div>
+    <a href="https://slint.dev/" target="_blank">
+      <img
+        src="assets/MadeWithSlint-logo-dark-large.png"
+        id="slint-img"
+        alt="Made with Slint"
+      />
+    </a>
     <script>
       // for local debugging case
       window.addEventListener("DOMContentLoaded", () => {
