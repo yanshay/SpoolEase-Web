@@ -19,13 +19,6 @@
             <li><a href="console.html">SpoolEase Console</a></li>
             <li><a href="scale.html">SpoolEase Scale</a></li>
             <li>
-              <a
-                target="_blank"
-                href="https://github.com/yanshay/SpoolEase/releases/tag/SpoolEase-Desktop-r0.1.0"
-                >SpoolEase Desktop</a
-              >
-            </li>
-            <li>
               <a href="https://github.com/yanshay/spoolease" target="_blank"
                 >GitHub</a
               >
@@ -143,30 +136,11 @@
       <div class="container">
         <h2 class="section-title">Firmware Install/Upgrade</h2>
         <div class="firmware-options">
+
           <div class="firmware-card">
             <div class="firmware-description">
-              <h3>Previous Version<br />SpoolEase Console v0.1.12</h3>
-              <p>
-                Stable release with core NFC features supporting single printer
-                and multiple AMS's
-              </p>
-            </div>
-            <div class="firmware-buttons">
-              <esp-web-install-button
-                style="grid-column: span 2"
-                id="prev-new-install"
-                manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/web-install/manifest-new-0.1.12.json"
-              >
-                <button slot="activate" class="btn single-button">
-                  New Install
-                </button>
-              </esp-web-install-button>
-            </div>
-          </div>
-          <div class="firmware-card">
-            <div class="firmware-description">
-              <h3>Current Version<br />SpoolEase Console v0.2.3</h3>
-              <p>Latest stable release with support for multiple printers</p>
+              <h3>Previous Version<br />SpoolEase Console v0.2.3</h3>
+              <p>Previous stable release with support for multiple printers</p>
             </div>
             <div class="firmware-buttons">
               <esp-web-install-button
@@ -186,10 +160,10 @@
           </div>
           <div class="firmware-card">
             <div class="firmware-description">
-              <h3>Next Version<br />SpoolEase Console v0.3.2</h3>
+              <h3>Current Version<br />SpoolEase Console v0.3.2</h3>
               <p>
-                Beta release with support for
-                <a href="scale.html">SpoolEase Scale</a>
+                Current stable release with support for
+                <a href="scale.html">SpoolEase Scale</a> device (optional)
               </p>
             </div>
             <div class="firmware-buttons">
@@ -203,6 +177,34 @@
               <esp-web-install-button
                 id="next-upgrade"
                 manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/console/web-install/manifest-upgrade-0.3.2.json"
+              >
+                <button slot="activate" class="btn">Upgrade</button>
+              </esp-web-install-button>
+            </div>
+          </div>
+
+          <div class="firmware-card">
+            <div class="firmware-description">
+              <h3>Next Beta Version<br />SpoolEase Console v0.3.3-RC1</h3>
+              <p>
+                <ul>
+                  <li>Automatic filament brand and color name detection</li>
+                  <li>Fix for X1C losing K values after restarts</li>
+                  <li>Slots Tag info and K (for X1C) persist across Console restarts to <b>SD card</b> (optional but required for persistence)</li>
+                </ul>
+              </p>
+            </div>
+            <div class="firmware-buttons">
+              <!-- <esp-web-install-button -->
+              <!--   id="next-new-install" -->
+              <!--   manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/console/web-install/manifest-new-0.3.2.json" -->
+              <!-- > -->
+              <!--   <button slot="activate" class="btn">New Install</button> -->
+              <!-- </esp-web-install-button> -->
+
+              <esp-web-install-button style="grid-column: span 2;"
+                id="next-upgrade"
+                manifest="https://debug.spoolease.io/console/manifest-console-0-3-3-RC1.json"
               >
                 <button slot="activate" class="btn">Upgrade</button>
               </esp-web-install-button>
