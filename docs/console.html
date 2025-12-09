@@ -154,38 +154,9 @@
 
           <div class="firmware-card">
             <div class="firmware-description">
-              <h3>Previous Version<br />SpoolEase Console v0.3.4</h3>
+              <h3>Previous Version<br />SpoolEase Console v0.3.5</h3>
               <p>
-                Current stable release with support for
-                <a href="scale.html">SpoolEase Scale</a> device (optional)
-              </p>
-            </div>
-            <div class="firmware-buttons">
-              <esp-web-install-button
-                id="prev-new-install"
-                manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/console/web-install/manifest-new-0.3.4.json"
-              >
-                <button slot="activate" class="btn">New Install</button>
-              </esp-web-install-button>
-
-              <esp-web-install-button
-                id="prev-upgrade"
-                manifest="https://raw.githubusercontent.com/yanshay/spoolease-bin/refs/heads/main/bins/console/web-install/manifest-upgrade-0.3.4.json"
-              >
-                <button slot="activate" class="btn">Upgrade</button>
-              </esp-web-install-button>
-            </div>
-          </div>
-
-          <div class="firmware-card">
-            <div class="firmware-description">
-              <h3>Current Version<br />SpoolEase Console v0.3.5</h3>
-              <p>
-                <ul>
-                  <li>Restore slot data on SpoolEase Console restart</li>
-                  <li>Automatic brand and filament color detection</li>
-                  <li>Restore pressure advance (K) values after printer restart (primarily for X1C)</li>
-                </ul>
+                An old version that required encoding tags, <b>without</b> the inventory management, weight tracking, etc.
               </p>
             </div>
             <div class="firmware-buttons">
@@ -206,13 +177,40 @@
 
           <div class="firmware-card">
             <div class="firmware-description">
-              <h3>Next Version<br />SpoolEase Console v0.5.0</h3>
+              <h3>Current Version<br />SpoolEase Console v0.5.0</h3>
               <p>
                 <ul>
-                  <li><a href="https://docs.spoolease.io/docs/welcome">Super Major Release</a></li>
+                  <li>Inventory Management</li>
+                  <li>Dual method weight tracking</li>
+                  <li>Printer slot filament configuration</li>
+                  <li>Much more ...</li>
+                  <li><a href="https://docs.spoolease.io/docs/welcome">Documentation</a></li>
                   <li><a href="https://docs.spoolease.io/docs/Technicalities/upgrading" target="_blank">Upgrade Notes</a></li>
-                  <li><a href="https://bin.spoolease.io/bins/0.5/debug.html">Flashing Page</a></li>
-                  <li>Also requires flashing the Scale from same flashing page</li>
+                </ul>
+              </p>
+            </div>
+            <div class="firmware-buttons">
+              <esp-web-install-button
+                id="curr-new-install"
+                manifest="https://bin.spoolease.io/bins/0.5/console/web-install/manifest-new-0.5.0.json"
+              >
+                <button slot="activate" class="btn">New Install</button>
+              </esp-web-install-button>
+              <esp-web-install-button
+                id="next-upgrade"
+                manifest="https://bin.spoolease.io/bins/0.5/console/web-install/manifest-upgrade-0.5.0.json"
+              >
+                <button slot="activate" class="btn">Upgrade</button>
+              </esp-web-install-button>
+            </div>
+          </div>
+
+          <div class="firmware-card">
+            <div class="firmware-description">
+              <h3>Next Version<br />SpoolEase Console v0.5.x</h3>
+              <p>
+                <ul>
+                  <li>Information will be added here when early release is available</li>
                 </ul>
               </p>
             </div>
