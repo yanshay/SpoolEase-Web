@@ -69,13 +69,45 @@
         color: var(--primary-color);
       }
 
-      .product-hero {
-        padding: 4rem 0;
+      .hero-shell {
         background: linear-gradient(
           135deg,
           var(--secondary-color),
           var(--primary-color)
         );
+      }
+
+      .legacy-notice {
+        background: transparent;
+        padding: 1rem 0;
+      }
+
+      .legacy-notice-card {
+        background-color: rgba(231, 76, 60, 0.24);
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        border-radius: 10px;
+        color: var(--light-text);
+        font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+        font-weight: 600;
+        padding: 0.8rem 1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+        text-align: center;
+      }
+
+      .legacy-notice-card a {
+        color: #ffe082;
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .legacy-notice-card a:hover {
+        color: #fff3c4;
+      }
+
+      .product-hero {
+        padding: 2.5rem 0 4rem;
+        background: transparent;
         color: var(--light-text);
       }
 

@@ -75,11 +75,43 @@
         .nav-links a:hover {
             color: var(--primary-color);
         }
+
+        .hero-shell {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        }
+
+        .legacy-notice {
+            background: transparent;
+            padding: 1rem 0;
+        }
+
+        .legacy-notice-card {
+            background-color: rgba(231, 76, 60, 0.24);
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            border-radius: 10px;
+            color: var(--light-text);
+            font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+            font-weight: 600;
+            padding: 0.8rem 1rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+            text-align: center;
+        }
+
+        .legacy-notice-card a {
+            color: #ffe082;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .legacy-notice-card a:hover {
+            color: #fff3c4;
+        }
         
         .hero {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            background: transparent;
             color: var(--light-text);
-            padding: 6rem 0;
+            padding: 3rem 0;
             text-align: center;
             padding-bottom: 20rem;
         }
@@ -300,14 +332,24 @@
       </div>
     </header>
 
-    <section class="hero">
+    <div class="hero-shell">
+      <section class="legacy-notice" aria-label="Website notice">
+        <div class="container">
+          <div class="legacy-notice-card">
+            This is the old SpoolEase website. Please visit the new home at <a href="https://docs.spoolease.io">docs.spoolease.io</a>.
+          </div>
+        </div>
+      </section>
+
+      <section class="hero">
         <div class="container">
             <h1>SpoolEase - Revolutionize Your 3D Printing Workflow With NFC</h1>
             <p>The intelligent NFC filament management system - with inventory tracking, precise weight monitoring, automatic filament configuration and more, for your Bambu Lab printer.</p>
             <a href="#products" class="btn">Explore Products</a>
             <a href="https://github.com/yanshay/SpoolEase" target="_blank" class="btn">I Want to Build It</a>
         </div>
-    </section>
+      </section>
+    </div>
 
     <div class="video-wrapper">
       <div class="video">
